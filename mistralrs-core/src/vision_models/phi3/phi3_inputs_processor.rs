@@ -548,9 +548,9 @@ impl ImagePreProcessor for Phi3InputsProcessor {
             padded_images.push(image_transformed);
             num_img_tokens.push(num_image_tokens);
         }
-        if padded_images.len() > 1 {
-            candle_core::bail!("Can only process one image per batch");
-        }
+        // if padded_images.len() > 1 {
+        //     candle_core::bail!("Can only process one image per batch");
+        // }
         let image_sizes = image_sizes[0];
 
         Ok(PreprocessedImages {

@@ -736,7 +736,7 @@ impl ImageEmbedding {
                 let mut output_imgs = Vec::new();
                 let mut output_len = Vec::new();
                 for bs_ in 0..bs {
-                    let (h, w) = image_sizes.as_ref().unwrap()[bs_];
+                    let (h, w) = image_sizes.as_ref().unwrap()[0];
                     let h = h / 336;
                     let w = w / 336;
                     let B_ = h * w;
